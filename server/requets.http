@@ -1,0 +1,55 @@
+###
+POST http://localhost:9000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "laport",
+    "password":"susanne",
+    "email":"annlaport23@gmail.com"
+
+}
+
+###
+POST http://localhost:9000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "annlaport23@gmail.com",
+    "password":"susanne"
+}
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/635f55611d597a1fc1f7edcf HTTP/1.1
+
+
+###
+PUT http://localhost:9000/api/users/635f55e21d597a1fc1f7edd1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Laport Saelemaekers",
+    "description": "Young man with deep blue hair",
+    "abilitie":"he increase his resistance and force, and can control wolves"
+
+}
+
+###
+DELETE http://localhost:9000/api/users/635f6063a6dca347bb7ac4f6 HTTP/1.1
+
+
+###
+POST http://localhost:9000/api/addpokemon HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "154",
+    "name": "meganium",
+    "trainer":"laport"
+
+}
+
+###
+GET http://localhost:9000/api/users/name/laport
