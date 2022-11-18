@@ -93,7 +93,7 @@ function Login() {
           }
 
           <br/>
-          <Link className="linkregister" to='/register'>Click here if you dont have an account</Link>
+          <Link className="linkregister" to='/signin'>Click here if you dont have an account</Link>
           <br />
           <br />
           <button 
