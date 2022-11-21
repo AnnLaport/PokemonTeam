@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+    margin: 0.5rem 0.5rem;
+}
+
+.container{
+    background-image: url(./assets/963317.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+

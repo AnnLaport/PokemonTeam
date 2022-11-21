@@ -76,10 +76,8 @@ function Login() {
           onChange={e=>setEmail(e.target.value)}
           />
       
-          <br/>
-
           <input 
-          className="form-control m-1" 
+          className="form-control" 
           type="password" 
           placeholder="password"
           value={password}
@@ -89,12 +87,10 @@ function Login() {
             error.key===1 ?
               <h6 className='text-danger'>{error.msg}</h6>
             :
-              <div></div>
+              <h6>Registration is free!</h6>
           }
 
-          <br/>
-          <Link className="linkregister" to='/register'>Click here if you dont have an account</Link>
-          <br />
+          <Link className="linkregister" to='/signin'>Click here if you dont have an account</Link>
           <br />
           <button 
           className='btn btn-light' 

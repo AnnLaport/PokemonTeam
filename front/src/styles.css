@@ -53,6 +53,10 @@ button{
     text-decoration: underline;
 }
 
+.login-card input{
+    margin: 1.5rem 0rem;
+}
+
 @media(width>=500px){
     .login-card{
         margin: 0;

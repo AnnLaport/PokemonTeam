@@ -27,7 +27,7 @@ const registerUser=asynchandler(async(req,res)=>{
         })
     }else{
         res.status(400);
-        throw new Error("Error Ocurrred!");
+        throw new Error("Error Ocurred!");
     }
 });
 
