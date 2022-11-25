@@ -30,7 +30,7 @@ function Login() {
       setLoading(0);
       setError({key:0, msg:"its ok"})
       localStorage.setItem("userInfo", JSON.stringify(data))
-      history("/teamedit");
+      history("/pokemonteam");
       
 
     } catch (error) {
@@ -44,7 +44,7 @@ function Login() {
     const userInfo= localStorage.getItem("userInfo");
 
     if(userInfo){
-      history("/teamedit");
+      history("/pokemonteam");
     }
   },[history])
 

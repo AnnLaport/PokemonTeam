@@ -23,7 +23,16 @@ router.get("/pokemon", (req, res)=>{
 router.get("/pokemon/:id", (req, res)=>{
     const {id}= req.params;
     userSchema
-    .find({trainer:id})
+    .find({trainer:id}) 
+    .then((data)=>res.json(data))
+    .catch((error=>res.json({message:error})))
+});
+
+//delete a pokemon
+router.delete("/pokemon/:id", (req, res)=>{
+    const {id}= req.params;
+    userSchema
+    .deleteOne({_id:id})
     .then((data)=>res.json(data))
     .catch((error=>res.json({message:error})))
 });
