@@ -19,7 +19,7 @@ router.get("/pokemon", (req, res)=>{
     .catch((error=>res.json({message:error})))
 });
 
-//bring a user
+//bring a pokemon of certain user
 router.get("/pokemon/:id", (req, res)=>{
     const {id}= req.params;
     userSchema
