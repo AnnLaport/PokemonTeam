@@ -48,6 +48,7 @@ Content-Type: application/json
     "id": "745",
     "name": "lycanroc",
     "trainer":"637065d15f857fe5b0a8da69",
+    "typesPokemon":["fire","rock"],
     "gender":"male"
 
 }

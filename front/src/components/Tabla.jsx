@@ -10,7 +10,8 @@ function Tabla() {
   const[numberpokemon,setNumberPokemon]=useState(0);
 
   const addMaleFemale=async(genderd)=>{
-    
+
+    console.log(tiposp);
     const gender=genderd;
     const iduser= datosuser._id;
     const idpokemon= onepokemon.id;
@@ -26,6 +27,7 @@ function Tabla() {
           "id":idpokemon,
           "name":namepokemon,
           "trainer":iduser,
+          "typesPokemon": tiposp,
           "gender":gender
        }
       )
@@ -67,9 +69,12 @@ function Tabla() {
     let res=0;
     if(data.status===200){
         res= await data.json();
+        let arrayTipos= []
         setPokemon(res);
-        setTipos(res.types);
-        res.types.map(tipo=>console.log(tipo.type.name));
+        res.types.map(tipo=>(
+        arrayTipos.push(tipo.type.name)));
+        //console.log(arrayTipos);
+        setTipos(arrayTipos);
     }else{
         setPokemon(null);
         res='no existe esa url';
@@ -118,7 +123,7 @@ function Tabla() {
                 <td>
                   <ul>
                     {tiposp.map((tipo, index) => (
-                      <li key={index}>{tipo.type.name}</li>
+                      <li key={index}>{tipo}</li>
                     ))}
                   </ul>
                 </td>
