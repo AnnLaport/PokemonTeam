@@ -6,6 +6,7 @@ import Signin from './components/Signin';
 import Home from './components/Home';
 import Tabla from './components/Tabla';
 import Stadistics from './components/Stadistics';
+import Cerrarsesion from './components/Cerrarsesion';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="" element={<h1>Home</h1>} />
           <Route path="teamedit" element={<Tabla/>} />
           <Route path="stadistics" element={<Stadistics />} />
+          <Route path="cerrarsesion" element={<Cerrarsesion />} />
         </Route>
         <Route path="/register" element={<h2>Sign up of new user!</h2>} />
         <Route path="*" element={<NotFound />} />

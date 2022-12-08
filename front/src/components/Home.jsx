@@ -33,7 +33,7 @@ function Home() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link">
+              <NavLink className="nav-link" to="cerrarsesion">
                 Cerrar Sesion 
               </NavLink>
             </li>
