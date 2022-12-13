@@ -5,7 +5,7 @@ import tablatipos from '../tabladetipos'
 function Stadistics() {
 
     const[userpokemon, setUserpokemon]=useState([]);
-    const[caracteristicasp,setCaracts]=useState([tablatipos]); 
+    const caracteristicasp = [tablatipos];
     const[mostrepeatedtype, setMostrt]= useState('');
 
     const electricStyle= {
@@ -104,9 +104,9 @@ function Stadistics() {
                 let variable = 0;
                 let contador = 0;
                 let cuenta = 0;
-                arraytipos.map(p => {
+                arraytipos.forEach(p => {
                       cuenta = 0
-                      arraytipos.map(x => {
+                      arraytipos.forEach(x => {
                             if (p === x) { cuenta++ }
                              })
                             if (cuenta > contador) {
@@ -114,6 +114,9 @@ function Stadistics() {
                                   variable = p;
                             }
                       });
+                  if(contador===1){
+                    variable='generic'
+                  }
                 setMostrt({tipo: variable, veces: contador})
             } catch (error) {
                 console.log(error)

@@ -10,17 +10,16 @@ import Cerrarsesion from './components/Cerrarsesion';
 
 function App() {
 
-
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/pokemonteam/" element={<Home />}>
-          <Route path="" element={<h1>Home</h1>} />
-          <Route path="teamedit" element={<Tabla/>} />
-          <Route path="stadistics" element={<Stadistics />} />
-          <Route path="cerrarsesion" element={<Cerrarsesion />} />
+            <Route path="" element={<h1>Home</h1>} />
+            <Route path="teamedit" element={<Tabla />} />
+            <Route path="stadistics" element={<Stadistics />} />
+            <Route path="cerrarsesion" element={<Cerrarsesion />} />
         </Route>
         <Route path="/register" element={<h2>Sign up of new user!</h2>} />
         <Route path="*" element={<NotFound />} />
